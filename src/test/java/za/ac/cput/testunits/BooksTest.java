@@ -5,6 +5,7 @@
  */
 package za.ac.cput.testunits;
 
+import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -50,11 +51,11 @@ public class BooksTest {
         assertSame(a.getPrice(), b.getPrice(), "Not same");
     }
     
-    //this test fails if execution time exceeds 1 second
-    @Timeout (1)
+    //this test fails if execution time exceeds 50 milliseconds
+    @Timeout (value = 50, unit = TimeUnit.MILLISECONDS)
     @Test 
     public void timeout(){
-        for(int i = 0; i < 60000; i++){
+        for(int i = 0; i < 6000; i++){
             System.out.println(i);
         }
     }
