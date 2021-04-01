@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Timeout;
 
 /**
  *
- * @author AmyrH
+ * @author AmyrH - 214044750
  */
 public class SalaryTest {
     
